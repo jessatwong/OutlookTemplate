@@ -1,0 +1,39 @@
+﻿/* Page-specific styling */
+
+#details {
+    margin-left: 15px;
+}
+
+#details th {
+    text-align: left;
+    padding-right: 10px;
+}
+
+#from {
+    cursor: pointer;
+    color: #336699;
+}
+
+#from:focus, #from:hover, #from:active {
+    color: #4ea2df;
+}
+
+.ms-Button {
+    border-radius: 14px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+#webLinkListCol1 {
+    width: 50%;
+    float: left;
+}
+
+#webLinkListCol2 {
+    width: 50%;
+    float: right;
+}
+
+#content-main {
+    height: 400px;
+}

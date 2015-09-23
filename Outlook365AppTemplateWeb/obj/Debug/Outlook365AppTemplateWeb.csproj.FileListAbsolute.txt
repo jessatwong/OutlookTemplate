@@ -1,0 +1,40 @@
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\csc.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\vbc.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.dll.config
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.pdb
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.csprojResolveAssemblyReference.cache
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.dll
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.pdb
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\csc.exe
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\vbc.exe
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.dll.config
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Outlook365AppTemplateWeb.pdb
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.dll
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.pdb
+C:\Users\jewon\Downloads\Outlook365AppTemplate\Outlook365AppTemplateWeb\obj\Debug\Outlook365AppTemplateWeb.csprojResolveAssemblyReference.cache

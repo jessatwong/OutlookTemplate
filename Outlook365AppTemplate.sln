@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outlook365AppTemplate", "Outlook365AppTemplate\Outlook365AppTemplate.csproj", "{82743370-24B8-401C-BEAA-325588591430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outlook365AppTemplateWeb", "Outlook365AppTemplateWeb\Outlook365AppTemplateWeb.csproj", "{B2A11F75-A5E5-422C-A44D-6CBD1ED9354B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82743370-24B8-401C-BEAA-325588591430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82743370-24B8-401C-BEAA-325588591430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82743370-24B8-401C-BEAA-325588591430}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{82743370-24B8-401C-BEAA-325588591430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82743370-24B8-401C-BEAA-325588591430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82743370-24B8-401C-BEAA-325588591430}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B2A11F75-A5E5-422C-A44D-6CBD1ED9354B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A11F75-A5E5-422C-A44D-6CBD1ED9354B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A11F75-A5E5-422C-A44D-6CBD1ED9354B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A11F75-A5E5-422C-A44D-6CBD1ED9354B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
