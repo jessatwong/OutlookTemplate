@@ -1,7 +1,7 @@
 ﻿/// <reference path="../App.js" />
 
 
-var item = "";
+var entities = "";
 
 (function () {
     "use strict";
@@ -10,7 +10,7 @@ var item = "";
     Office.initialize = function (reason) {
         $(document).ready(function () {
             app.initialize();
-            item = Office.context.mailbox.item;
+            entities = Office.context.mailbox.item.getEntities();
 
             if ($('.ms-FilePicker').length > 0) {
                 $('.ms-FilePicker').css({ "position": "absolute !important" });
@@ -37,7 +37,7 @@ var item = "";
     entities that are found and sent to the web server.*/
     function injectHandoff() {
         // Extract entites and format handoff strings
-        var entities = item.getEntities();
+        //var entities = item.getEntities();
 
         //Format Address and inject handoff forms
         for (var i = 0; i < templateConfig.Handoff.length; i++) {
@@ -104,8 +104,8 @@ Otherwise, users are told that no contacts were found. */
 function getContacts() {
     webLinkToggle(true);
     //all contacts found in message
-    var contactsArray = item.getEntities.contacts;
-    if (contactsArray != null) {
+    var contactsArray = entities.contacts;
+    if (contactsArray != null && contactsArray.length > 0) {
         var contactsHTML = "";
         for (var i = 0; i < contactsArray.length; i++) {
             //Name of contact
@@ -154,8 +154,8 @@ function getContacts() {
 events or meetings in the email message. An example of a phrase it will recognize is, "Let's meet [time] for [event or meeting]"*/
 function getMeetings() {
     webLinkToggle(true);
-    var meetingArray = item.getEntities.meetingSuggestions;
-    if (meetingArray != null) {
+    var meetingArray = entities.meetingSuggestions;
+    if (meetingArray != null && meetingArray.length > 0) {
         var meetingHTML = "";
         for (var i = 0; i < meetingArray.length; i++) {
             var meeting = meetingArray[i];
@@ -186,8 +186,8 @@ function getMeetings() {
 i.e "Please update the spreadsheet." Otherwise, users are told that no task suggestions were found. */
 function getTasks() {
     webLinkToggle(true);
-    var taskArray = item.getEntities.taskSuggestions;
-    if (taskArray != null) {
+    var taskArray = entities.taskSuggestions;
+    if (taskArray != null && taskArray.length > 0) {
         var taskHTML = "";
         for (var i = 0; i < taskArray.length; i++) {
             var task = taskArray[i];
