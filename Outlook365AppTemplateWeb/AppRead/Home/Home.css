@@ -34,6 +34,10 @@
     float: right;
 }
 
+#overallWebLink, #displayEntities {
+    overflow: auto;
+}
+
 #content-main {
-    height: 400px;
+    height: 250px;
 }
