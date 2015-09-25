@@ -8,7 +8,7 @@
         {
             "Platform": "Web",
             "HandoffType": "GET",
-            "URI": "http://www.bing.com/maps/default.aspx?where={{ADDRESS}}"
+            "URI": "http://www.bing.com/maps/default.aspx?where= ADDRESS "
         },
         {
             "Platform": "Web",
@@ -20,17 +20,17 @@
         {
             "Platform": "Windows",
             "HandoffType": "APP",
-            "URI": "maps://?where={{ADDRESS}}"
+            "URI": "maps://?where= ADDRESS "
         },
         {
             "Platform": "iOs",
             "HandoffType": "APP",
-            "URI": "placeholder"
+            "URI": "http://maps.apple.com/?q= ADDRESS "
         },
         {
             "Platform": "Android",
             "HandoffType": "APP",
-            "URI": "https://maps.google.com/maps?q={{ADDRESS}}"
+            "URI": "https://maps.google.com/maps?q= ADDRESS "
         }
     ],
 

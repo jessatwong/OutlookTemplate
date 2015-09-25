@@ -43,8 +43,8 @@ var entities = "";
         for (var i = 0; i < templateConfig.Handoff.length; i++) {
             var handoffObject = templateConfig.Handoff[i];
             //Checks for URL replacement and replaces it with the address detected
-            if (handoffObject.URI.indexOf("{{ADDRESS}}") > -1) {
-                handoffObject.URI = handoffObject.URI.replace("{{ADDRESS}}", encodeURI(entities.addresses[0]));
+            if (handoffObject.URI.indexOf(" ADDRESS ") > -1) {
+                handoffObject.URI = handoffObject.URI.replace(" ADDRESS ", encodeURI(entities.addresses[0]));
             }
             var handoffLink = "";
             var webLink = "<span class=\"ms-Button-label\">" +
