@@ -37,7 +37,6 @@ var entities = "";
     entities that are found and sent to the web server.*/
     function injectHandoff() {
         // Extract entites and format handoff strings
-        //var entities = item.getEntities();
 
         //Format Address and inject handoff forms
         for (var i = 0; i < templateConfig.Handoff.length; i++) {

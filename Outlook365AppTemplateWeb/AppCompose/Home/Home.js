@@ -11,6 +11,7 @@
             $('#set-subject').click(setSubject);
             $('#get-subject').click(getSubject);
             $('#add-to-recipients').click(addToRecipients);
+            $('#add-to-body').click(addToBody);
         });
     };
 
@@ -36,6 +37,10 @@
         } else if (item.itemType === Office.MailboxEnums.ItemType.Appointment) {
             Office.cast.item.toAppointmentCompose(item).requiredAttendees.addAsync([addressToAdd]);
         }
+    }
+
+    function addToBody() {
+        Office.cast.item.toItemCompose(Office.context.mailbox.item).body.setAsync($('#content').html());
     }
 
 })();
