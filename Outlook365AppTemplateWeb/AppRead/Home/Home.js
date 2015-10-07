@@ -46,8 +46,7 @@ var entities = "";
                 handoffObject.URI = handoffObject.URI.replace(" ADDRESS ", encodeURI(entities.addresses[0]));
             }
             var handoffLink = "";
-            var webLink = "<span class=\"ms-Button-label\">" +
-                templateConfig.Branding.ButtonText + " Using " + handoffObject.Platform + " (" + handoffObject.HandoffType + ")</span>";
+            var webLink = "<span class=\"ms-Button-label\">" + handoffObject.ButtonValue + ")</span>";
             //form submit if using POST
             if (handoffObject.HandoffType == "POST") {
                 handoffLink = $("<form />").attr({
