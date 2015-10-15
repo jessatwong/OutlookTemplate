@@ -41,18 +41,24 @@ var entities = "";
         //Format Address and inject handoff forms
         for (var i = 0; i < templateConfig.Handoff.length; i++) {
             var handoffObject = templateConfig.Handoff[i];
+            var entityType = " " + handoffObject.EntityType + " ";
+            var targetType = "_blank";
             //Checks for URL replacement and replaces it with the address detected
-            if (handoffObject.URI.indexOf(" ADDRESS ") > -1) {
-                handoffObject.URI = handoffObject.URI.replace(" ADDRESS ", encodeURI(entities.addresses[0]));
+            if (handoffObject.URI.indexOf(entityType) > -1) {
+                handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.addresses[0]));
+            }
+
+            if (handoffObject.InWindow) {
+                targetType = "_self";
             }
             var handoffLink = "";
-            var webLink = "<span class=\"ms-Button-label\">" + handoffObject.ButtonValue + ")</span>";
+            var webLink = "<span class=\"ms-Button-label\">" + handoffObject.ButtonValue + "</span>";
             //form submit if using POST
             if (handoffObject.HandoffType == "POST") {
                 handoffLink = $("<form />").attr({
                     method: "POST",
                     action: handoffObject.URI,
-                    target: "_blank"
+                    target: targetType
                 });
                 var hidden = $("<input />").attr({
                     type: "hidden",
@@ -70,7 +76,7 @@ var entities = "";
                 handoffLink = $("<a />").attr({
                     class: "ms-Button",
                     href: handoffObject.URI,
-                    target: "_blank",
+                    target: targetType
                 });
                 handoffLink.append(webLink + "<br/>");
             }
