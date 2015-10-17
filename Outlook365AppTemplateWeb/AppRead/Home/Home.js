@@ -41,11 +41,40 @@ var entities = "";
         //Format Address and inject handoff forms
         for (var i = 0; i < templateConfig.Handoff.length; i++) {
             var handoffObject = templateConfig.Handoff[i];
-            var entityType = " " + handoffObject.EntityType + " ";
             var targetType = "_blank";
             //Checks for URL replacement and replaces it with the address detected
-            if (handoffObject.URI.indexOf(entityType) > -1) {
-                handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.addresses[0]));
+            for (var j = 0; j < handoffObject.EntityTypes.length; j++) {
+                var entityType = " " + handoffObject.EntityTypes[j] + " ";
+                
+                if (handoffObject.EntityTypes[j] == "ADDRESS") {
+                    exceptionCheck(entities.addresses);
+                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.addresses[0]));
+                }
+                if (handoffObject.EntityTypes[j].indexOf("CONTACT" > -1) {
+                    exceptionCheck(entities.contacts);
+                    if (handoffObject.EntityTypes[j] == "CONTACT_NAME") {
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].personName));
+                    }
+                    if (handoffObject.EntityTypes[j] == "CONTACT_PHONE") {
+                        exceptionCheck(entities.contacts[0].phoneNumbers);
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].phoneNumbers[0].phoneString));
+                    }
+
+                    if (handoffObject.EntityTypes[j] == "CONTACT_EMAIL") {
+                        exceptionCheck(entities.contacts[0].emailAddresses);
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].emailAddresses[0]));
+                    }
+                }
+
+                if (handoffObject.EntityTypes[j] == "MEETING_NAME") {
+                    exceptionCheck(entities.meetingSuggestions);
+                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.meetingSuggestions[0].meetingString));
+                }
+
+                if (handoffObject.EntityTypes[j] == "TASK_NAME") {
+                    exceptionCheck(entities.taskSuggestions);
+                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.taskSuggestions[0].taskString));
+                }
             }
 
             if (handoffObject.InWindow) {
@@ -58,11 +87,12 @@ var entities = "";
                 handoffLink = $("<form />").attr({
                     method: "POST",
                     action: handoffObject.URI,
-                    target: targetType
+                    target: "_blank"
                 });
+
                 var hidden = $("<input />").attr({
                     type: "hidden",
-                    name: handoffObject.Address,
+                    name: handoffObject.PostKey,
                     value: entities.addresses[0]
                 });
                 handoffLink.append(hidden);
@@ -76,7 +106,7 @@ var entities = "";
                 handoffLink = $("<a />").attr({
                     class: "ms-Button",
                     href: handoffObject.URI,
-                    target: targetType
+                    target: "_blank"
                 });
                 handoffLink.append(webLink + "<br/>");
             }
@@ -92,6 +122,12 @@ var entities = "";
 })();
 
 //TBI Other Entites from https://msdn.microsoft.com/en-us/library/office/fp161071.aspx 
+
+function exceptionCheck(objectToCheck) {
+    if (objectToCheck == null || objectToCheck.length == 0) {
+        throw IllegalArgumentException("URI does not have indicated EntityType to replace with.");
+    }
+}
 
 function webLinkToggle(hide) {
     if (hide) {
