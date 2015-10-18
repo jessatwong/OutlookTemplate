@@ -47,33 +47,52 @@ var entities = "";
                 var entityType = " " + handoffObject.EntityTypes[j] + " ";
                 
                 if (handoffObject.EntityTypes[j] == "ADDRESS") {
-                    exceptionCheck(entities.addresses);
-                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.addresses[0]));
+                    if (exceptionCheck(entities.addresses) == "OK") {
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.addresses[0]));
+                    } else {
+                        handoffObject.ButtonValue = "Address not detected in email";
+                    }
                 }
-                if (handoffObject.EntityTypes[j].indexOf("CONTACT" > -1) {
-                    exceptionCheck(entities.contacts);
-                    if (handoffObject.EntityTypes[j] == "CONTACT_NAME") {
-                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].personName));
-                    }
-                    if (handoffObject.EntityTypes[j] == "CONTACT_PHONE") {
-                        exceptionCheck(entities.contacts[0].phoneNumbers);
-                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].phoneNumbers[0].phoneString));
-                    }
+                if (handoffObject.EntityTypes[j].indexOf("CONTACT" > -1)) {
+                    if (exceptionCheck(entities.contacts) == "OK") {
+                        if (handoffObject.EntityTypes[j] == "CONTACT_NAME") {
+                            handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].personName));
+                        }
+                        if (handoffObject.EntityTypes[j] == "CONTACT_PHONE") {
+                            if (exceptionCheck(entities.contacts[0].phoneNumbers) == "OK") {
+                                handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].phoneNumbers[0].phoneString));
 
-                    if (handoffObject.EntityTypes[j] == "CONTACT_EMAIL") {
-                        exceptionCheck(entities.contacts[0].emailAddresses);
-                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].emailAddresses[0]));
+                            } else {
+                                handoffObject.ButtonValue = "Contact Phone number not detected in email";
+                            }
+                        }
+
+                        if (handoffObject.EntityTypes[j] == "CONTACT_EMAIL") {
+                            if (exceptionCheck(entities.contacts[0].emailAddresses) == "OK") {
+                                handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].emailAddresses[0]));
+                            } else {
+                                handoffObject.ButtonValue = "Contact Email not detected in email";
+                            }
+                        }
+                    } else {
+                        handoffObject.ButtonValue = "Contacts not detected in email";
                     }
                 }
 
                 if (handoffObject.EntityTypes[j] == "MEETING_NAME") {
-                    exceptionCheck(entities.meetingSuggestions);
-                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.meetingSuggestions[0].meetingString));
+                    if (exceptionCheck(entities.meetingSuggestions) == "OK") {
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.meetingSuggestions[0].meetingString));
+                    } else {
+                        handoffObject.ButtonValue = "Meeting suggestion not detected in email";
+                    }
                 }
 
                 if (handoffObject.EntityTypes[j] == "TASK_NAME") {
-                    exceptionCheck(entities.taskSuggestions);
-                    handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.taskSuggestions[0].taskString));
+                    if (exceptionCheck(entities.taskSuggestions) == "OK") {
+                        handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.taskSuggestions[0].taskString));
+                    } else {
+                        handoffObject.ButtonValue = "Task suggestion not detected in email";
+                    }
                 }
             }
 
@@ -125,8 +144,9 @@ var entities = "";
 
 function exceptionCheck(objectToCheck) {
     if (objectToCheck == null || objectToCheck.length == 0) {
-        throw IllegalArgumentException("URI does not have indicated EntityType to replace with.");
+        return "All entity types in link not detected in this email";
     }
+    return "OK";
 }
 
 function webLinkToggle(hide) {
