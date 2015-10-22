@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="Outlook365AppTemplate"
-     ProductID="{2251a678-9d5b-4d0f-b2f6-4a6926e386cd}"
+     ProductID="{3b64bb70-3ecd-4249-950b-66942fd470df}"
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0"
 >

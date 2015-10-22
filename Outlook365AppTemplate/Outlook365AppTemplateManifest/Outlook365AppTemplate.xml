@@ -7,9 +7,6 @@
 	<DefaultLocale>en-US</DefaultLocale>
 	<DisplayName DefaultValue="Map My Mail" />
 	<Description DefaultValue="Outlook365AppTemplate"/>
-  <AppDomains>
-    <AppDomain>http://www.bing.com/mapspreview?where</AppDomain>
-  </AppDomains>
 	<Hosts>
 		<Host Name="Mailbox" />
 	</Hosts>
