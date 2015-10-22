@@ -17,15 +17,15 @@
             "Platform": "Web",
             "HandoffType": "GET",
             "EntityTypes": ["ADDRESS"],
-            "InWindow": "false",
-            "URI": "https://www.bing.com/mapspreview?v=2&rtp=~adr. ADDRESS ",
+            "InWindow": true,
+            "URI": "https://www.bing.com/mapspreview?where= ADDRESS ",
             "ButtonValue": "Map Using Web (GET)"
             },
         {
             "Platform": "Web",
             "HandoffType": "POST",
             "EntityTypes": ["ADDRESS"],
-            "InWindow": "false",
+            "InWindow": false,
             "URI": "https://posttestserver.com/post.php",
             "PostKey": "Address",
             "ButtonValue": "Map Using Web (POST)"
@@ -35,7 +35,7 @@
             "Platform": "Windows",
             "HandoffType": "APP",
             "EntityTypes": ["ADDRESS"],
-            "InWindow": "false",
+            "InWindow": false,
             "URI": "maps://?where= ADDRESS ",
             "ButtonValue": "Map Using Windows (APP)"
         },
@@ -43,7 +43,7 @@
             "Platform": "iOs",
             "HandoffType": "APP",
             "EntityTypes": ["ADDRESS"],
-            "InWindow": "false",
+            "InWindow": false,
             "URI": "https://maps.apple.com/?q= ADDRESS ",
             "ButtonValue": "Map Using iOS (APP)"
         },
@@ -51,7 +51,7 @@
             "Platform": "Android",
             "HandoffType": "APP",
             "EntityTypes": ["ADDRESS"],
-            "InWindow": "false",
+            "InWindow": false,
             "URI": "https://maps.google.com/maps?q= ADDRESS ",
             "ButtonValue": "Map Using Android (APP)"
         }

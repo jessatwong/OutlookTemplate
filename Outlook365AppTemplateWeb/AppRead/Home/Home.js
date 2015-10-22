@@ -53,7 +53,7 @@ var entities = "";
                         handoffObject.ButtonValue = "Address not detected in email";
                     }
                 }
-                if (handoffObject.EntityTypes[j].indexOf("CONTACT" > -1)) {
+                if (handoffObject.EntityTypes[j].indexOf("CONTACT") > -1) {
                     if (exceptionCheck(entities.contacts) == "OK") {
                         if (handoffObject.EntityTypes[j] == "CONTACT_NAME") {
                             handoffObject.URI = handoffObject.URI.replace(entityType, encodeURI(entities.contacts[0].personName));
@@ -77,6 +77,7 @@ var entities = "";
                     } else {
                         handoffObject.ButtonValue = "Contacts not detected in email";
                     }
+                    //handoffObject.ButtonValue = handoffObject.EntityTypesp[j].indexOf("CONTACT");
                 }
 
                 if (handoffObject.EntityTypes[j] == "MEETING_NAME") {
@@ -106,7 +107,7 @@ var entities = "";
                 handoffLink = $("<form />").attr({
                     method: "POST",
                     action: handoffObject.URI,
-                    target: "_blank"
+                    target: targetType
                 });
 
                 var hidden = $("<input />").attr({
@@ -125,7 +126,7 @@ var entities = "";
                 handoffLink = $("<a />").attr({
                     class: "ms-Button",
                     href: handoffObject.URI,
-                    target: "_blank"
+                    target: targetType
                 });
                 handoffLink.append(webLink + "<br/>");
             }
